@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.jc.ms.jcproject"
+        minSdkVersion 11
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    sourceSets {
+        main { java.srcDirs = ['src/main/java', 'src/main/java/com/jc/ms/jcproject/fragments'] }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+}
